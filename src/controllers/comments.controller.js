@@ -19,11 +19,11 @@ class CommentsController {
       var comment = new Comment(imageId, text.val())
       console.log(comment)
       $(text).val('')
-      // self.render(comment)
+      function render(comment) {
+        $(`#comments-${imageId}`).append(comment.commentEl())
+      }
+      render(comment)
     });
   }
 
-  // render(comment) {
-  //   $(`#comments-0`).append(comment.commentEl())
-  // }
 }

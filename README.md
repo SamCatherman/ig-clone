@@ -41,11 +41,11 @@ Build the following on the comment class model (Use ES6 syntax)
 + `Comment.all`
   + should return all of the comment objects in an array
   + a property of the Comment class
-+ `Comment.prototype.findImage(imageId)`
+<!-- + `Comment.prototype.findImage(imageId)`
   + given an `int` for an image id, returns the image object with that id
-  + before return - adds current comment to image's comments property
-+ `Comment.prototype.commentEl()`
+  + before return - adds current comment to image's comments property -->
+<!-- + `Comment.prototype.commentEl()`
   + returns a string of html
-    + html has an `li` tag with an `id` field and shows the comment
+    + html has an `li` tag with an `id` field and shows the comment -->
 
 **NOTE:** All of the above will be tested thoroughly, so make sure your associations are working properly!

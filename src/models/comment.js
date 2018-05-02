@@ -4,16 +4,17 @@ class Comment extends Image {
         super()
         this.imageID = imageID
         this.text = text;
+        this.all = []
         this.findImage(imageID)
     }
 
     all() {
+        return this.all.push()
     }
 
     //pushes new comment into Image object's comments array, returns that image object
     findImage(imageId) {
         Image.all[imageId].comments.push(this.text)
-        console.log(Image.all[imageId].comments)
         return Image.all[imageId]
     }
     
@@ -21,7 +22,6 @@ class Comment extends Image {
         console.log('commentEl function')
         return `<li id='${this.imageID}'>${this.text}</li>`
     }
-
 }
 
 
