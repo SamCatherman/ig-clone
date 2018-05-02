@@ -2,7 +2,6 @@ class CommentsController {
   constructor() {
     this.$addCommentForm = $('.add-comment')
     this.$wrapper = $('#wrapper')
-    // this.$commentList = $('#')
   }
 
   init() {
@@ -21,11 +20,10 @@ class CommentsController {
       console.log(comment)
       $(text).val('')
       // self.render(comment)
-      comment.findImage()
     });
   }
 
-  render(comment) {
-    $(`#comments-0`).append(comment.commentEl())
-  }
+  // render(comment) {
+  //   $(`#comments-0`).append(comment.commentEl())
+  // }
 }

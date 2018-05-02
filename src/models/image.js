@@ -6,6 +6,7 @@ function Image(title, url) {
   this.title = title;
   this.url = url;
   this.comments = [];
+  //iterates through data, pushes each new object into 'all' array
   this.constructor.all.push(this);
 }
 
@@ -25,6 +26,7 @@ Image.prototype.imageEl = function() {
 };
 
 Image.load = function() {
+  //mapping data to new array. For each object, creates a new Image instance and renders via ImagesController
   Image.defaults.map(function(image){
     var newImage = new Image(image.title, image.url)
     ImagesController.render(newImage)
@@ -32,6 +34,9 @@ Image.load = function() {
 }
 
 Image.all = [];
+
+console.log(Image.all)
+
 Image.defaults = [
   {
     title: 'The Perfect Date',

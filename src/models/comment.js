@@ -1,18 +1,20 @@
 // create Comment class here
-class Comment {
+class Comment extends Image {
     constructor(imageID, text){
+        super()
         this.imageID = imageID
         this.text = text;
-        this.findImage();
+        this.findImage(imageID)
     }
 
     all() {
-      
     }
 
-    findImage() {
-      console.log('comments array', Image.comments)
-    //   return Image.comments
+    //pushes new comment into Image object's comments array, returns that image object
+    findImage(imageId) {
+        Image.all[imageId].comments.push(this.text)
+        console.log(Image.all[imageId].comments)
+        return Image.all[imageId]
     }
     
     commentEl() {
@@ -21,4 +23,5 @@ class Comment {
     }
 
 }
+
 
