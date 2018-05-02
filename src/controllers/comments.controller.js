@@ -17,7 +17,6 @@ class CommentsController {
       var imageId = parseInt($(this).parents('ul').data('id'));
       var text = $(`#comment-description-${imageId}`);
       var comment = new Comment(imageId, text.val());
-      console.log(comment);
       $(text).val('');
       self.render(imageId, comment)
     });
@@ -26,5 +25,4 @@ class CommentsController {
   render(imageId, comment) {
     $(`#comments-${imageId}`).append(comment.commentEl())
   }
-
 }

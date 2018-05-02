@@ -6,11 +6,12 @@ class Comment extends Image {
         this.text = text;
         this.allComments = []
         this.findImage(imageID)
+        this.all()
     }
 
     all() {
-        console.log(this)
-        return this.allComments.push(this)
+        this.allComments.push(this)
+        return this.allComments
     }
 
     //pushes new comment into Image object's comments array, returns that image object
@@ -20,7 +21,6 @@ class Comment extends Image {
     }
     
     commentEl() {
-        console.log('commentEl function')
         return `<li id='${this.imageID}'>${this.text}</li>`
     }
 }

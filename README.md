@@ -27,7 +27,7 @@ Build out the following methods on the `CommentsController` class (Use ES6 synta
 + `CommentsController.prototype.addCommentFormListener()`
   + iterates through each comment form and adds an eventlistener to trigger a function on form submit
   + function should grab the imageId + comment and create a new Comment with those arguments
-  + execute the render function on that found image object to append the new comment
+  + execute the render function on that found image object to append the new comment -->
 + `CommentsController.prototype.render(commentObject)`
   + selects the appropriate `ul` for this comment to be added to
   + appends the new comment element to this `ul`
@@ -41,11 +41,19 @@ Build the following on the comment class model (Use ES6 syntax)
 + `Comment.all`
   + should return all of the comment objects in an array
   + a property of the Comment class
-<!-- + `Comment.prototype.findImage(imageId)`
++ `Comment.prototype.findImage(imageId)`
   + given an `int` for an image id, returns the image object with that id
-  + before return - adds current comment to image's comments property -->
-<!-- + `Comment.prototype.commentEl()`
+  + before return - adds current comment to image's comments property
++ `Comment.prototype.commentEl()`
   + returns a string of html
-    + html has an `li` tag with an `id` field and shows the comment -->
+    + html has an `li` tag with an `id` field and shows the comment
 
 **NOTE:** All of the above will be tested thoroughly, so make sure your associations are working properly!
+
+
+A few quirks: 
+1) the Comment class's 'all' method seems to only return one comment object at a time, effectively copying the object instance to its 'allComments' property. I assume that I'm executing it in the wrong place, but wasn't very clear on this deliverable. 
+2) the Comment class inherits from Image, which treats each new comment as a new Image itself. This doesn't affect the user experience, as comments are associated with images via their imageId taken from the DOM, rather than the image data array itself. In retrospect, I would probably want to refactor this to be more closely copuled to the image model. 
+3) The h2 with the title of each image post is rendering to the side of each image, but would preferably be situated above each picture. I'm chalking this one up to my js mindset today :)
+
+All in all this was a fun and challenging assignment. Thanks! 
