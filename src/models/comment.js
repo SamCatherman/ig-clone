@@ -4,12 +4,13 @@ class Comment extends Image {
         super()
         this.imageID = imageID
         this.text = text;
-        this.all = []
+        this.allComments = []
         this.findImage(imageID)
     }
 
     all() {
-        return this.all.push()
+        console.log(this)
+        return this.allComments.push(this)
     }
 
     //pushes new comment into Image object's comments array, returns that image object
