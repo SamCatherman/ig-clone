@@ -3,19 +3,26 @@ body {
     font-family: "Georgia"
 }
 
-.image {
+.images {
     display: flex;
     justify-content: center;
     margin: 0 auto;
 }
 
-img {
-    display: block;
-    width: 30em;
+.comment-list {
+    margin: auto;
+    padding: 10px;
+    list-style: none;
+
 }
 
+img, h2, form, .comment-list {
+    display: flex;
+    margin: 0 auto;
+    width: 30em;
+}
 h2 {
-    display: inline-block;
+    padding-left: 9em;
 }
 
 h1 { 
@@ -23,10 +30,6 @@ h1 {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-}
-
-.comment-list {
-    padding: 10px;
 }
 
 button {
