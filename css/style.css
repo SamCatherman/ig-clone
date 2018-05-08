@@ -10,13 +10,14 @@ body {
 }
 
 .comment-list {
-    margin: auto;
+    text-align: center;
+    margin-right: 25em;
     padding: 10px;
     list-style: none;
 
 }
 
-img, h2, form, .comment-list {
+img, h2, form {
     display: flex;
     margin: 0 auto;
     width: 30em;
