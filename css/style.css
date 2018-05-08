@@ -10,10 +10,11 @@ body {
 }
 
 .comment-list {
-    text-align: center;
-    margin-right: 25em;
+    text-align: left;
+    margin-left: 39.5em;
     padding: 10px;
     list-style: none;
+    max-width: 20em;
 
 }
 
